@@ -19,7 +19,8 @@ drawPlot <- function() {
 
     png("plot2.png", width=480, height=480)
     
-    plot(df$DateTime, df$Global_active_power, typ='l', ann=F, lwd=2)
+    par(mfrow=c(1, 1))
+    plot(df$DateTime, df$Global_active_power, typ='l', ann=F, lwd=1)
     title(ylab="Global Active Power (kilowatts)")
     
     dev.off()

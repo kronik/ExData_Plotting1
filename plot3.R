@@ -19,6 +19,8 @@ drawPlot <- function() {
     
     png("plot3.png", width=480, height=480)
 
+    par(mfrow=c(1, 1))
+    
     plot(df$DateTime, df$Sub_metering_1, typ='l', ann=F, col="black")
     points(df$DateTime, df$Sub_metering_2, col="red", typ="l")
     points(df$DateTime, df$Sub_metering_3, col="blue", typ="l")
